@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Blush & Bloom | Home</title>
+    <!-- Google Fonts for authentic typography matching the screenshot -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for layout icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main Navigation Bar -->
+    <header class="navbar">
+        <div class="brand-title">Campus Blush & Bloom <span>♡</span></div>
+        <nav class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#services">Services</a>
+            <a href="#availability">Availability</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About</a>
+        </nav>
+        <a href="#availability" class="btn-book-now">Book Now</a>
+    </header>
+
+    <!-- Top Notice Header Line inside Hero -->
+    <div class="student-notice-wrapper">
+        <span class="notice-tag">💕 AVAILABLE WITHIN KU 💕</span>
+    </div>
+
+    <!-- Hero Showcase Layout Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-left-info">
+            <h1 class="main-catchphrase">Look Good,<br>Feel Even Better <span>♡</span></h1>
+            <p class="sub-description">Quality nail, lash and beauty services — all in one place.<br>Self care isn't a luxury, it's a must. 💕</p>
+            <a href="#availability" class="btn-cta-appointment">Book Your Appointment <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+    </section>
+
+    <!-- Our Services & Prices Section -->
+    <section id="services" class="services-section">
+        <div class="section-title-block">
+            <h2>Our Services & Prices</h2>
+            <p class="cursive-subtitle">Because you deserve the best ♡</p>
+        </div>
+
+        <div class="services-row-grid">
+            <!-- Nails Menu Card -->
+            <div class="service-item-card">
+                <h3>Nails</h3>
+                <ul class="prices-wrapper">
+                    <li><span>Plain Gel</span> <span class="price-lbl">Ksh 350</span></li>
+                    <li><span>Tips & Gel</span> <span class="price-lbl">Ksh 600</span></li>
+                    <li><span>Acrylics</span> <span class="price-lbl">Ksh 700</span></li>
+                    <li><span>Gel Overlay</span> <span class="price-lbl">Ksh 700</span></li>
+                </ul>
+            </div>
+
+            <!-- Manicure Menu Card -->
+            <div class="service-item-card">
+                <h3>Manicure</h3>
+                <ul class="prices-wrapper">
+                    <li class="centered-single-price"><span class="price-lbl">Ksh 400</span></li>
+                    <li class="bullet-detail">💕 Soaking</li>
+                    <li class="bullet-detail">💕 Cuticle care</li>
+                    <li class="bullet-detail">💕 Scrub</li>
+                    <li class="bullet-detail">💕 Massage</li>
+                </ul>
+            </div>
+
+            <!-- Pedicure Menu Card -->
+            <div class="service-item-card">
+                <h3>Pedicure</h3>
+                <ul class="prices-wrapper">
+                    <li class="centered-single-price"><span class="price-lbl">Ksh 500</span></li>
+                    <li class="bullet-detail">💕 Soaking</li>
+                    <li class="bullet-detail">💕 Cuticle care</li>
+                    <li class="bullet-detail">💕 Scraping</li>
+                    <li class="bullet-detail">💕 Smoothing</li>
+                    <li class="bullet-detail">💕 Massage</li>
+                </ul>
+            </div>
+
+            <!-- Lashes Menu Card (Locked State) -->
+            <div class="service-item-card locked-state">
+                <h3>Lashes</h3>
+                <div class="status-coming-soon">Coming Soon</div>
+            </div>
+
+            <!-- Make Up Menu Card (Locked State) -->
+            <div class="service-item-card locked-state">
+                <h3>Make Up</h3>
+                <div class="status-coming-soon">Coming Soon</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weekly Timeline Availability Calendar Grid -->
+    <section id="availability" class="availability-section">
+        <div class="section-title-block">
+            <h2><span class="calendar-icon">📅</span> Availability</h2>
+            <p class="cursive-subtitle">Book your slot and let's make it happen ♡</p>
+        </div>
+
+        <div class="calendar-columns-container">
+            <!-- Mon -->
+            <div class="calendar-day-box">
+                <h3>Monday <span>Sept 21</span></h3>
+                <div class="day-slots-wrapper">
+                <div class="time-slot open-slot" data-day="Monday Sept 21" data-time="1:00 PM - 3:30 PM">
+                    1:00 PM - 3:30 PM <span class="slot-badge">Available</span>
+                </div>
+                <div class="time-slot filled-slot">
+                    4:00 PM - 6:30 PM <span class="slot-badge">Booked</span>
+                </div>
+                </div>
+            </div>
+
+            <!-- Tue -->
+            <div class="calendar-day-box">
+                <h3>Tuesday <span>Sept 22</span></h3>
+                <div class="day-slots-wrapper">
+                <div class="time-slot filled-slot">
+                    1:00 PM - 3:30 PM <span class="slot-badge">Booked</span>
+                </div>
+                <div class="time-slot open-slot" data-day="Tuesday Sept 22" data-time="4:00 PM - 6:30 PM">
+                    4:00 PM - 6:30 PM <span class="slot-badge">Available</span>
+                </div>
+                </div>
+            </div>
+
+            <!-- Wed -->
+            <div class="calendar-day-box">
+                <h3>Wednesday <span>Sept 23</span></h3>
+                <div class="day-slots-wrapper">
+                <div class="time-slot open-slot" data-day="Wednesday Sept 23" data-time="10:00 AM - 12:30 PM">
+                    10:00 AM - 12:30 PM <span class="slot-badge">Available</span>
+                </div>
+                <div class="time-slot open-slot" data-day="Wednesday Sept 23" data-time="1:00 PM - 3:30 PM">
+                    1:00 PM - 3:30 PM <span class="slot-badge">Available</span>
+                </div>
+                <div class="time-slot open-slot" data-day="Wednesday Sept 23" data-time="4:00 PM - 6:30 PM">
+                    4:00 PM - 6:30 PM <span class="slot-badge">Available</span>
+                </div>
+                </div>
+            </div>
+
+            <!-- Thu -->
+            <div class="calendar-day-box">
+                <h3>Thursday <span>Sept 24</span></h3>
+                <div class="day-slots-wrapper">
+                <div class="time-slot open-slot" data-day="Thursday Sept 24" data-time="1:00 PM - 3:30 PM">
+                    1:00 PM - 3:30 PM <span class="slot-badge">Available</span>
+                </div>
+                <div class="time-slot open-slot" data-day="Thursday Sept 24" data-time="4:00 PM - 6:30 PM">
+                    4:00 PM - 6:30 PM <span class="slot-badge">Available</span>
+                </div>
+                </div>
+            </div>
+
+            <!-- Fri -->
+            <div class="calendar-day-box">
+                <h3>Friday <span>Sept 25</span></h3>
+                <div class="day-slots-wrapper">
+                <div class="time-slot open-slot" data-day="Friday Sept 25" data-time="1:00 PM - 3:30 PM">
+                    1:00 PM - 3:30 PM <span class="slot-badge">Available</span>
+                </div>
+                <div class="time-slot open-slot" data-day="Friday Sept 25" data-time="4:00 PM - 6:30 PM">
+                    4:00 PM - 6:30 PM <span class="slot-badge">Available</span>
+                </div>
+                </div>
+            </div>
+
+            <!-- Sat -->
+            <div class="calendar-day-box">
+                <h3>Saturday <span>Sept 26</span></h3>
+                <div class="day-slots-wrapper">
+                <div class="time-slot open-slot" data-day="Saturday Sept 26" data-time="10:00 AM - 12:30 PM">
+                    10:00 AM - 12:30 PM <span class="slot-badge">Available</span>
+                </div>
+                <div class="time-slot open-slot" data-day="Saturday Sept 26" data-time="1:00 PM - 3:30 PM">
+                    1:00 PM - 3:30 PM <span class="slot-badge">Available</span>
+                </div>
+                <div class="time-slot open-slot" data-day="Saturday Sept 26" data-time="4:00 PM - 6:30 PM">
+                    4:00 PM - 6:30 PM <span class="slot-badge">Available</span>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Work Portfolio Slider Gallery Display Grid -->
+    <section id="gallery" class="portfolio-gallery-section">
+        <div class="section-title-block">
+            <h2>✨ My Work ✨</h2>
+            <p class="cursive-subtitle">A little bit of what I do best ♡</p>
+        </div>
+        <div class="gallery-row">
+            <div class="gallery-photo-card"><img src="image9.jpeg" alt="Work Example 1"></div>
+            <div class="gallery-photo-card"><img src="image10.jpeg" alt="Work Example 2"></div>
+            <div class="gallery-photo-card"><img src="image5.jpeg" alt="Work Example 3"></div>
+
+            <!-- Hidden initially shown on View More click -->
+            <div class="gallery-photo-card hidden-photo"><img src="image8.jpeg" alt="Work Example 4"></div>
+            <div class="gallery-photo-card hidden-photo"><img src="image2.jpeg" alt="Work Example 5"></div>
+            <div class="gallery-photo-card hidden-photo"><img src="image1.jpeg" alt="Work Example 6"></div>
+            <div class="gallery-photo-card hidden-photo"><img src="image4.jpeg" alt="Work Example 7"></div>
+            <div class="gallery-photo-card hidden-photo"><img src="image7.jpeg" alt="Work Example 8"></div>
+            <div class="gallery-photo-card hidden-photo"><img src="image3.jpeg" alt="Work Example 9"></div>
+            <div class="gallery-photo-card hidden-photo"><img src="image6.jpeg" alt="Work Example 10"></div>
+        </div>
+        <div class="center-view-more">
+            <button class="btn-view-more">View More</button>
+        </div>
+    </section>
+
+    <!-- Content Footer Area Block -->
+    <footer class="footer-block">
+        <div class="footer-left-cta">
+            <h3>Need to ask something?</h3>
+            <p>Chat with me on WhatsApp</p>
+            <p class="muted-subtext">I'm here to help with bookings, questions, and more!</p>
+            <a href="#" id="mainFooterWhatsAppBtn" class="btn-whatsapp-footer"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+        </div>
+        <div class="footer-right-details">
+            <p class="location-text"><i class="fa-solid fa-location-dot"></i> Available around KU • Nairobi, Kenya</p>
+            <p class="copyright-tag">&copy; 2026 Campus Blush & Bloom. Good Nails, Good Mood. ♡</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Selection Form Modal Overlay Grid Popup -->
+    <div id="bookingModalWindow" class="modal-overlay-bg">
+        <div class="modal-container-box">
+            <button class="close-modal-trigger">&times;</button>
+            <h3>Confirm Appointment Details</h3>
+            <p class="selected-time-summary">Selected: <strong id="modalActiveTimeLabel">Monday Sept 8 at 1:00 PM</strong></p>
+            
+            <form id="appointmentBookingForm">
+                <div class="input-field-group">
+                    <label for="studentFullName">Your Name:</label>
+                    <input type="text" id="studentFullName" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="input-field-group">
+                    <label>Select Treatments:</label>
+                    <div class="checkbox-services-grid">
+                        <label class="checkbox-item"><input type="checkbox" name="treatment" value="Plain Gel (Ksh 350)"> Plain Gel (Ksh 350)</label>
+                        <label class="checkbox-item"><input type="checkbox" name="treatment" value="Tips & Gel (Ksh 600)"> Tips & Gel (Ksh 600)</label>
+                        <label class="checkbox-item"><input type="checkbox" name="treatment" value="Acrylics (Ksh 700)"> Acrylics (Ksh 700)</label>
+                        <label class="checkbox-item"><input type="checkbox" name="treatment" value="Gel Overlay (Ksh 700)"> Gel Overlay (Ksh 700)</label>
+                        <label class="checkbox-item"><input type="checkbox" name="treatment" value="Manicure (Ksh 400)"> Manicure (Ksh 400)</label>
+                        <label class="checkbox-item"><input type="checkbox" name="treatment" value="Pedicure (Ksh 500)"> Pedicure (Ksh 500)</label>
+                        </div>
+                </div>
+                <button type="submit" class="btn-send-whatsapp-reservation"><i class="fa-brands fa-whatsapp"></i> Confirm via WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
