@@ -88,77 +88,140 @@ body{
     box-shadow: 0 2px 8px rgba(214, 122, 138, 0.2);
 }
 
-/* Notice line directly above Hero contents */
-.student-notice-wrapper {
-    text-align: left;
-    padding: 20px 6% 0 6%;
+/* Enable Smooth Scrolling Page-wide */
+html {
+    scroll-behavior: smooth;
 }
-
-.notice-tag {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--accent-rose);
-    letter-spacing: 0.5px;
-}
-
 /* Hero Section Layout rules */
 .hero-section {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px 6% 60px 6%;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.hero-left-info {
+    padding: 100px 6% 80px 6%;
+    min-height: 80vh;/*Takes up most of the screen height */
     width: 100%;
+
+
+/* Set image as background covering the entire section */
+background: linear-gradient(rgba(253, 245, 246, 0.15), rgba(253, 245, 246, 0.25)),
+          url('hero banner image.jpeg') center/cover no-repeat;
+
+border-bottom: 1px solid rgba(251, 203, 201, 0.4);
 }
 
-.main-catchphrase {
+/* Text Content Overlay Layer */
+.hero-content {
+    max-width: 700px;
+    z-index: 2;
+}
+
+.student-notice-wrapper {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.notice-tag {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent-rose);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 6px 16px;
+    border-radius: 20px;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.hero-content .main-catchphrase {
     font-family: var(--font-serif);
     font-size: 3.8rem;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.15;
-    margin-bottom: 15px;
-    color: var(--deep-text);
+    margin-bottom: 18px;
+    color: #ffffff !important;
+    text-shadow: 0, 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.main-catchphrase span {
+.hero-content .main-catchphrase span {
     color: var(--accent-rose);
 }
 
-.sub-description {
-    font-size: 1.05rem;
-    color: var(--muted-rose);
+.hero-content p {
+    font-size: 1.1rem;
+    color: #f8f9fa !important;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+    font-weight: 500;
     line-height: 1.6;
-    margin-bottom: 30px;
+    margin: 0 auto 30px auto;
+    max-width: 580px;
 }
 
-.btn-cta-appointment {
-    display: inline-block;
+.btn-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     background-color: var(--accent-rose);
     color: white;
     text-decoration: none;
-    padding: 12px 30px;
+    padding: 14px 34px;
     border-radius: 25px;
     font-weight: 600;
-    font-size: 0.95rem;
-    box-shadow: 0 4px 12px rgba(214, 122, 138, 0.3);
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(214, 122, 138, 0.4);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.btn-cta-appointment:hover {
+.btn-hero:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(214, 122, 138, 0.4);
+    box-shadow: 0 6px 20px rgba(214, 122, 138, 0.5);
 }
 
-/* Also center the top notice tag above the hero */
-.student-notice-wrapper {
-    text-align: center;
-    padding: 20px 6% 0 6%;
+/* Hide the standalone img tag since background-image replaces it*/
+.hero-image-container img {
+    display: none;
+}
+
+/* Floating Badge positioned near bottom center of hero overlay */
+.hero-image-container {
+    margin-top: 35px;
+    z-index: 2;
+}
+
+.hero-badge {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--deep-text);
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(251, 203, 201, 0.6); 
+}
+
+/* Mobile Screen Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 5% 50px 5%;
+        min-height: 70vh;
+    }
+
+    .hero-content .main-catchphrase {
+        font-size: 2.6rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    .hero-badge {
+        font-size: 0.75rem;
+        padding: 8px 18px;
+    }
 }
 
 /* Universal Section Headers */
