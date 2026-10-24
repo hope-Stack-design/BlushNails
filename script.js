@@ -116,27 +116,16 @@ if(viewMoreBtn) {
 
 // --- GALLERY VIEW MORE / VIEW LESS TOGGLE ---
 document.addEventListener("DOMContentLoaded", () => {
-    const viewMoreBtn = document.getElementById("viewMoreBtn");
-    
-    // Select both possible class names so it supports your existing photo grid cards
-    const hiddenItems = document.querySelectorAll(".hidden-gallery-item, .hidden-photo");
+    const viewMoreBtn = document.querySelector(".btn-view-more");
+    const hiddenPhotos = document.querySelectorAll(".gallery-photo-card.hidden-photo");
 
-    if (viewMoreBtn && hiddenItems.length > 0) {
+    if (viewMoreBtn && hiddenPhotos.length > 0) {
         viewMoreBtn.addEventListener("click", () => {
-            // Check if items are currently hidden (checks both inline style and class state)
-            const firstItem = hiddenItems[0];
-            const isHidden = firstItem.style.display === "none" || 
-                             firstItem.classList.contains("hidden-photo") || 
-                             firstItem.classList.contains("hidden-gallery-item");
+            // Check if photos are currently hidden
+            const isHidden = hiddenPhotos[0].style.display === "none" || hiddenPhotos[0].style.display === "";
 
-            hiddenItems.forEach(item => {
-                if (isHidden) {
-                    item.style.display = "block";
-                    item.classList.remove("hidden-photo", "hidden-gallery-item");
-                } else {
-                    item.style.display = "none";
-                    item.classList.add("hidden-gallery-item");
-                }
+            hiddenPhotos.forEach(photo => {
+                photo.style.display = isHidden ? "block" : "none";
             });
 
             if (isHidden) {
@@ -144,8 +133,8 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 viewMoreBtn.innerHTML = 'View More <i class="fa-solid fa-arrow-down"></i>';
                 
-                // Smoothly scroll back to top of gallery section when collapsing
-                const gallerySection = document.getElementById("gallery");
+                // Smooth scroll back up to the gallery header when collapsing
+                const gallerySection = document.getElementById("gallery") || document.querySelector(".gallery-section");
                 if (gallerySection) {
                     gallerySection.scrollIntoView({ behavior: 'smooth' });
                 }
