@@ -102,7 +102,7 @@ if (appointmentForm) {
 }
 
 // --- GALLERY VIEW MORE TOGGLE ---
-const viewMoreBtn = document.querySelector('.btn-view-more');
+/*const viewMoreBtn = document.querySelector('.btn-view-more');
 
 if(viewMoreBtn) {
     viewMoreBtn.addEventListener('click', () => {
@@ -112,4 +112,44 @@ if(viewMoreBtn) {
         //Hide the button after expanding all photos
         viewMoreBtn.style.display = 'none';
     });
-}
+}*/
+
+// --- GALLERY VIEW MORE / VIEW LESS TOGGLE ---
+document.addEventListener("DOMContentLoaded", () => {
+    const viewMoreBtn = document.getElementById("viewMoreBtn");
+    
+    // Select both possible class names so it supports your existing photo grid cards
+    const hiddenItems = document.querySelectorAll(".hidden-gallery-item, .hidden-photo");
+
+    if (viewMoreBtn && hiddenItems.length > 0) {
+        viewMoreBtn.addEventListener("click", () => {
+            // Check if items are currently hidden (checks both inline style and class state)
+            const firstItem = hiddenItems[0];
+            const isHidden = firstItem.style.display === "none" || 
+                             firstItem.classList.contains("hidden-photo") || 
+                             firstItem.classList.contains("hidden-gallery-item");
+
+            hiddenItems.forEach(item => {
+                if (isHidden) {
+                    item.style.display = "block";
+                    item.classList.remove("hidden-photo", "hidden-gallery-item");
+                } else {
+                    item.style.display = "none";
+                    item.classList.add("hidden-gallery-item");
+                }
+            });
+
+            if (isHidden) {
+                viewMoreBtn.innerHTML = 'View Less <i class="fa-solid fa-arrow-up"></i>';
+            } else {
+                viewMoreBtn.innerHTML = 'View More <i class="fa-solid fa-arrow-down"></i>';
+                
+                // Smoothly scroll back to top of gallery section when collapsing
+                const gallerySection = document.getElementById("gallery");
+                if (gallerySection) {
+                    gallerySection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    }
+});
